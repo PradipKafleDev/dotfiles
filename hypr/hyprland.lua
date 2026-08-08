@@ -18,12 +18,20 @@ local ipc = "noctalia msg "
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 
--- Laptop
+-- Laptop display
 hl.monitor({
-    output   = "",
+    output   = "eDP-1",
     mode     = "preferred",
     position = "auto",
-    scale    = "auto",
+    scale    = 1,
+})
+
+-- External monitor
+hl.monitor({
+    output   = "HDMI-A-1",
+    mode     = "preferred",
+    position = "auto",
+    scale    = 1,
 })
 
 

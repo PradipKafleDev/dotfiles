@@ -29,7 +29,7 @@ hl.monitor({
 -- External monitor
 hl.monitor({
     output   = "HDMI-A-1",
-    mode     = "preferred",
+    mode     = "2560x1440@144",
     position = "auto",
     scale    = 1,
 })

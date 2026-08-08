@@ -287,6 +287,12 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
+-- Move windows with mainMod + CTRL + arrow keys
+hl.bind(mainMod .. " + CTRL + left",  hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. " + CTRL + right", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. " + CTRL + up",    hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. " + CTRL + down",  hl.dsp.window.move({ direction = "down" }))
+
 -- Resize windows
 local resizeUnit = 20
 hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.resize({ x = resizeUnit, y = 0, relative=true }), { repeating = true })

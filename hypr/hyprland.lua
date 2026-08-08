@@ -295,6 +295,14 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
+-- Move focus between monitors
+hl.bind(mainMod .. " + CTRL + H", hl.dsp.focus({ monitor = "l" }))
+hl.bind(mainMod .. " + CTRL + L", hl.dsp.focus({ monitor = "r" }))
+
+-- Move active window between monitors
+hl.bind(mainMod .. " + CTRL + SHIFT + H", hl.dsp.window.move({ monitor = "l" }))
+hl.bind(mainMod .. " + CTRL + SHIFT + L", hl.dsp.window.move({ monitor = "r" }))
+
 -- Move windows with mainMod + CTRL + arrow keys
 hl.bind(mainMod .. " + CTRL + left",  hl.dsp.window.move({ direction = "left" }))
 hl.bind(mainMod .. " + CTRL + right", hl.dsp.window.move({ direction = "right" }))

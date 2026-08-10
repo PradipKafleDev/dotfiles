@@ -20,7 +20,7 @@ local ipc = "noctalia msg "
 
 -- Laptop display
 hl.monitor({
-    output   = "eDP-1",
+    output   = "desc:BOE 0x0D41",
     mode     = "preferred",
     position = "960x2160",
     scale    = 1,
@@ -36,7 +36,7 @@ hl.monitor({
 
 -- Office DELL monitor
 hl.monitor({
-    output   = "DP-10",
+    output   = "desc:Dell Inc. DELL S3221QS 2VKS6N3",
     mode     = "3840x2160@60",
     position = "0x0",
     scale    = 1,
@@ -44,7 +44,7 @@ hl.monitor({
 
 -- Office Lenovo monitor
 hl.monitor({
-    output    = "DP-11",
+    output    = "desc:Lenovo Group Limited L24i-30 UPB4PTW9",
     mode      = "1920x1080@74.97",
     position  = "3840x0",
     scale     = 1,
@@ -346,6 +346,9 @@ end
 hl.bind(mainMod .. " + CTRL + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 -- Fullscreen - Window takes up the entire screen.
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
+
+-- Lock screen
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(ipc .. "session lock"))
 
 -- Screenshot a monitor
 hl.bind("PRINT", hl.dsp.exec_cmd(ipc .. "screenshot-fullscreen pick"))

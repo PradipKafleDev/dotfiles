@@ -22,19 +22,34 @@ local ipc = "noctalia msg "
 hl.monitor({
     output   = "eDP-1",
     mode     = "preferred",
-    position = "auto",
+    position = "960x2160",
     scale    = 1,
 })
 
--- External monitor
+-- Home monitor
 hl.monitor({
     output   = "HDMI-A-1",
     mode     = "2560x1440@144",
-    position = "auto",
+    position = "auto-right",
     scale    = 1,
 })
 
+-- Office DELL monitor
+hl.monitor({
+    output   = "DP-10",
+    mode     = "3840x2160@60",
+    position = "0x0",
+    scale    = 1,
+})
 
+-- Office Lenovo monitor
+hl.monitor({
+    output    = "DP-11",
+    mode      = "1920x1080@74.97",
+    position  = "3840x0",
+    scale     = 1,
+    transform = 3,
+})
 
 ---------------------
 ---- MY PROGRAMS ----
@@ -413,3 +428,6 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+
+-- For Noctalia Color templates
+require("noctalia").apply_theme()

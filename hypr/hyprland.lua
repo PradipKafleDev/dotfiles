@@ -22,7 +22,8 @@ local ipc = "noctalia msg "
 hl.monitor({
     output   = "desc:BOE 0x0D41",
     mode     = "preferred",
-    position = "960x2160",
+    -- position = "960x2160",
+    position = "auto",
     scale    = 1,
 })
 
@@ -349,11 +350,21 @@ hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen
 
 -- Lock screen
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(ipc .. "session lock"))
+-- Lock and suspend
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd(ipc .. "session lock-and-suspend"))
 
 -- Screenshot a monitor
 hl.bind("PRINT", hl.dsp.exec_cmd(ipc .. "screenshot-fullscreen pick"))
 -- Screenshot a region
-hl.bind(mainMod .. " +  PRINT", hl.dsp.exec_cmd(ipc .. "screenshot-region"))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(ipc .. "screenshot-region"))
+
+-- Toggle screen recording
+hl.bind(
+    mainMod .. " + R",
+    hl.dsp.exec_cmd(
+        "noctalia msg plugin noctalia/screen_recorder:service all toggle"
+    )
+)
 
 -- Example special workspace (scratchpad)
 hl.bind(mainMod .. " + S",         hl.dsp.workspace.toggle_special("magic"))

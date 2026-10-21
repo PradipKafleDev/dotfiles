@@ -291,6 +291,12 @@ hl.device({
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
+-- Next workspace
+hl.bind(mainMod .. " + TAB", hl.dsp.focus({ workspace = "e+1" }))
+
+-- Previous workspace
+hl.bind(mainMod .. " + SHIFT + TAB", hl.dsp.focus({ workspace = "e-1" }))
+
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 -- Kill the process owning the window with a SIGKILL

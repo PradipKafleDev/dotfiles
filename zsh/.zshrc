@@ -41,10 +41,14 @@ precmd() {
     vcs_info
 }
 
+# Prompt
 setopt PROMPT_SUBST
 
-PROMPT='%F{green}%n@%m%f:%F{blue}%~%f%F{yellow}${vcs_info_msg_0_}%f
+PROMPT='%F{green}%n@%m%f:%F{blue}%~%f %F{yellow}${vcs_info_msg_0_}%f
 %F{green}❯%f '
+
+# File colours
+export LS_COLORS="${LS_COLORS}:di=01;34:fi=0:ex=01;35:ln=01;36"
 
 # Fuzzy history search (Ctrl+R)
 if (( $+commands[fzf] )); then

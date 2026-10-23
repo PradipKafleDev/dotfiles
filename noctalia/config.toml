@@ -1,0 +1,209 @@
+config_version = 8
+
+[bar.default]
+center = [ "clock", "recorder", "control-center" ]
+end = [
+    "sysmon",
+    "media",
+    "tray",
+    "notifications",
+    "clipboard",
+    "network",
+    "bluetooth",
+    "volume",
+    "brightness",
+    "battery",
+    "session"
+]
+
+[calendar]
+enabled = true
+
+[control_center.calendar]
+show_events_card = false
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+pre_action_fade_seconds = 30
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = false
+    timeout = 660.0
+
+[lockscreen]
+blur_intensity = 0.0
+tint_intensity = 0.19999999552965164
+wallpaper = "/home/pradipkafle/Wallpapers/wallhaven-3q6m6y.png"
+
+[lockscreen_widgets]
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@DP-9",
+    "lockscreen-login-box@DP-8",
+    "lockscreen-login-box@HDMI-A-1",
+    "lockscreen-login-box@eDP-1"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-8"]
+    box_height = 196.0
+    box_width = 720.0
+    cx = 1920.0
+    cy = 1440.0
+    output = "DP-8"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-8".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-9"]
+    box_height = 196.0
+    box_width = 720.0
+    cx = 960.0
+    cy = 961.0
+    output = "DP-9"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-9".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1"]
+    box_height = 196.0
+    box_width = 720.0
+    cx = 1280.0
+    cy = 1321.0
+    output = "HDMI-A-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@HDMI-A-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 720.0
+    cx = 640.0
+    cy = 601.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[plugin_settings."noctalia/screen_recorder"]
+directory = "/home/pradipkafle/Pictures/Screencasts"
+filename_pattern = "Screencast From %Y-%m-%d %H-%M-%S"
+restore_portal = true
+video_source = "focused"
+
+[plugins]
+enabled = [ "noctalia/screen_recorder" ]
+
+[shell]
+clipboard_enabled = false
+polkit_agent = true
+
+    [shell.screenshot]
+    directory = "/home/pradipkafle/Pictures/Screenshots"
+    filename_pattern = "Screenshot From %Y-%m-%d %H-%M-%S"
+
+[theme]
+builtin = "Noctalia"
+community_palette = "Oxocarbon"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-tonal-spot"
+
+    [theme.templates]
+    builtin_ids = [ "gtk3", "gtk4", "qt" ]
+
+[wallpaper]
+directory = "/home/pradipkafle/Wallpapers"
+
+    [wallpaper.default]
+    path = "/usr/share/noctalia/assets/noctalia-wallpaper.png"
+
+    [wallpaper.last]
+    path = "/home/pradipkafle/Wallpapers/wallhaven-zpvojg.jpg"
+
+    [wallpaper.monitors.DP-8]
+    path = "/home/pradipkafle/Wallpapers/wallhaven-zpvojg.jpg"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/pradipkafle/Wallpapers/wallhaven-zpvojg.jpg"
+
+[widget.clock]
+format = "{:%a %d %b  %H:%M}"
+
+[widget.recorder]
+type = "noctalia/screen_recorder:recorder"
